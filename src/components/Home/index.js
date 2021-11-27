@@ -6,7 +6,7 @@ import "./index.css";
 class Home extends Component {
 
   state = { isLoggedIn: true, 
-    jsonData: null, showData:false };
+    jsonData: null, showData:false,fileuploaded:false };
 
   componentDidMount() {
     this.checkIsLoggedIn();
@@ -41,7 +41,7 @@ class Home extends Component {
     fileReader.readAsText(event.target.files[0], "UTF-8");
     fileReader.onload = (event) => {
       localStorage.setItem("JsonData", event.target.result);
-      this.setState({ jsonData: event.target.result });
+      this.setState({ jsonData: event.target.result,fileuploaded:true});
     };
   };
 
@@ -53,7 +53,7 @@ class Home extends Component {
     
 
   renderLoggedIn = () => {
-    const { jsonData,showData } = this.state;
+    const { showData,fileuploaded } = this.state;
 
     return (
       <div className="wrapper">
@@ -105,7 +105,7 @@ class Home extends Component {
               </button>
               
             </form>
-            {jsonData && showData===false && (
+            {fileuploaded && showData===false && (
                 <p className="data-msg">
                   The data has been loaded successfully
                 </p>
