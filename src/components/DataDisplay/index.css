@@ -1,0 +1,20 @@
+
+
+  
+  .loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+
+  .data-display{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      
+
+  }
+  

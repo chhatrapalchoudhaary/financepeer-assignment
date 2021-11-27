@@ -1,0 +1,32 @@
+.data-container{
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 1em rgba(0,0,0,0.4);
+    margin:10px 0px;
+    padding: 20px 20px;
+    text-align: left;
+}
+.ids{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.user-item-user-id,.user-item-post-id{
+    font-size: 15px;
+    font-family: roboto;
+    font-weight: bold;
+    margin: 0px 10px;
+}
+.user-item-title{
+    font-size: 24px;
+    font-family: roboto;
+    font-weight: bold;
+    color: #3751ff;
+}
+.user-item-body{
+    font-size: 16px;
+    font-family: roboto;
+    color:gray;
+}
